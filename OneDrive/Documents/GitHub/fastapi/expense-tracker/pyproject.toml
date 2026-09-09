@@ -14,6 +14,16 @@ dependencies = [
     "uvicorn>=0.52.4",
 ]
 
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
 [project.scripts]
 expense-tracker = "expense_tracker:main"
 

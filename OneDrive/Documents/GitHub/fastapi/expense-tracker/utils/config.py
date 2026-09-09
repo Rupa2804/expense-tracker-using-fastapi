@@ -7,7 +7,8 @@ class Settings:
     def __init__(self):
         self.__MONGO_URI = os.getenv("MONGO_URL")
         self.__DB_NAME = os.getenv("MONGO_DATABASE")
-        self.__COLLECTION_NAME = os.getenv("COLLECTION_NAME")
+        self.__TRIP_COLLECTION_NAME = os.getenv("TRIP_COLLECTION_NAME")
+        self.__EXPENSE_COLLECTION_NAME = os.getenv("EXPENSE_COLLECTION_NAME")
 
     @property
     def MONGO_URI(self):
@@ -19,7 +20,11 @@ class Settings:
         return self.__DB_NAME
 
     @property
-    def COLLECTION_NAME(self):
-        return self.__COLLECTION_NAME
-    
+    def TRIP_COLLECTION_NAME(self):
+        return self.__TRIP_COLLECTION_NAME
+
+    @property
+    def EXPENSE_COLLECTION_NAME(self):
+        return self.__EXPENSE_COLLECTION_NAME
+
 settings = Settings()
